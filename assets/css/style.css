@@ -1,0 +1,141 @@
+* {
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-color: black;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 120px 1fr 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "cabecalho"
+        "principal"
+        "rodape";
+}
+.cabecalho {
+    position: sticky;
+    grid-area: cabecalho;
+    color: white;
+    background: cornflowerblue;
+    display: flex   ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    z-index: 1;
+    box-shadow: 0px 3px 15px #000;
+}
+.cabecalho > h1 {
+    margin:0px;
+    font-weight: 300;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.cabecalho > h1 > a{
+    
+}
+
+.cabecalho > h2 {
+    margin: 0px;
+    font-weight: 200;
+    font-size: 1.6rem;
+}
+.principal {
+    grid-area: principal;
+    background: darkcyan;
+    height: calc(100vh - 180px);
+    background-color: white;
+    padding: 20px
+}
+.conteudo {
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 3px 15px -1px rgb(0, 0, 0 1, 0.2rem);
+}
+.rodape {
+    grid-area: rodape;
+    background-color: #555;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 300;
+    /*position:sticky;
+    bottom: 0px; */
+}
+.rodape > a {
+    display: flex;
+    margin: 0px 2px;
+    color: lightgrey;
+    text-decoration: none;
+}
+.rodape > a:hover {
+    color: lightseagreen;
+    cursor: pointer;
+}
+.modulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+.modulo {
+    flex-basis: 32%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.modulo > h3 {
+    background-color: cornflowerblue;
+    color: white;
+    margin: 0px 0px 0px 0px;
+    font-weight: 300;
+    font-size: 1.6rem;
+    padding:  20px;
+    align-items: center;
+}
+.modulo > ul {
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+
+}
+.modulo > ul > li { 
+    padding: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    align-items: center;
+}
+.modulo > ul > li > a {
+    display: flex;
+    text-decoration: none;
+    color: #555;
+    padding: 10px;
+}
+.modulo > ul > li > a:hover {
+    background-color: lightgrey;
+}
+.modulo.verde { border:2px solid green}
+.modulo.verde > h3 { background-color: green }
+
+.modulo.azul { border:2px solid blue}
+.modulo.azul > h3 { background-color: blue }
+
+.modulo.roxo { border:2px solid purple}
+.modulo.roxo > h3 { background-color: purple }
+
+.modulo.vermelho { border:2px solid red}
+.modulo.vermelho > h3 { background-color: red }
+
+.modulo.laranja { border:2px solid orange}
+.modulo.laranja > h3 { background-color: orange }
+
+.modulo.pink { border:2px solid lightpink}
+.modulo.pink > h3 { background-color: lightpink }
